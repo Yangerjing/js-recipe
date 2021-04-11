@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display">ここに何かが表示される</div>
+    <button id="button">ボタンをクリック!</button>
+    <div id="second-display">文字が変わる</div>
+    <button id="second-button">ボタン</button>
+​
+    <script>
+      const DISPLAY = document.getElementById("display")
+      const BUTTON = document.getElementById("button")
+      BUTTON.onclick = function() {
+        DISPLAY.textContent = "ボタンがクリックされました!!!!"
+      }
+      
+      const SECOND_DISPLAY = document.getElementById("second-display")
+      const SECOND_BUTTON = document.getElementById("second-button")
+      SECOND_BUTTON.onclick = function() {
+          SECOND_DISPLAY.textContent = "成功"
+      }
+    </script>
+  </body>
+</html>
