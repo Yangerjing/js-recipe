@@ -11,12 +11,17 @@
     <button id="button">ボタンをクリック!</button>
     <div id="second-display">文字が変わる</div>
     <button id="second-button">ボタン</button>
+    
 ​
     <script>
       const DISPLAY = document.getElementById("display")
       const BUTTON = document.getElementById("button")
+      let count = 0
       BUTTON.onclick = function() {
-        DISPLAY.textContent = "ボタンがクリックされました!!!!"
+        count += 1
+        display.textContent = count
+        display.style.color = "red"
+        console.dir(display)
       }
       
       const SECOND_DISPLAY = document.getElementById("second-display")
