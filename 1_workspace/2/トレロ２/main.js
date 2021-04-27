@@ -1,6 +1,6 @@
-const inputElement = document.getElementById("input-todo")
-const container = document.getElementById("cards-container")
-const addButton = document.getElementById("add-button")
+const inputElement = document.getElementsByClassName("input-todo")
+const container = document.getElementsByClassName("cards-container")
+const addButton = document.getElementsByClassName("add-button")
 
 addButton.onclick = function(){
     const card = createCard(inputElement.value)
@@ -23,3 +23,4 @@ const createCard = function(text){
     card.append(deleteButton)
     return card
 }
+console.dir(container)
