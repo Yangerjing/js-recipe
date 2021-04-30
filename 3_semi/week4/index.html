@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <!-- 二井君のエリア -->
+    <div id="my-money">0</div>
+    <button id="add-button">1000円増える</button>
+
+    <div id="charge">おつり表示</div>
+    <button id="charge-button">おつりを出す</button>
+
+    <!-- 光太郎君のエリア -->
+    <button id="tea-button">お茶　100円</button>
+    <button id="coka-button">コーラ　130円</button>
+    <button id="zone-button">ZONE ２００円</button>
+    <div id="display"></div>
+    <script>
+      const myMoney = document.getElementById("my-money");
+      const addButton = document.getElementById("add-button");
+      let money = 0; //投入金額
+      addButton.onclick = function () {
+        money += 1000;
+        myMoney.textContent = money;
+      };
+      const charge = document.getElementById("charge");
+      const chargeButton = document.getElementById("charge-button");
+      chargeButton.onclick = function () {
+        charge.textContent = money;
+        //投入金額moneyを0にしなきゃいけない
+        money = 0;
+        myMoney.textContent = money;
+      };
+
+      //こうたろう
+      const display = document.getElementById("display");
+      const teaButton = document.getElementById("tea-button");
+      const cokaButton = document.getElementById("coka-button");
+      const zoneButton = document.getElementById("zone-button");
+
+      teaButton.onclick = function () {
+        display.textContent = "お茶を購入しました。";
+        money -= 100;
+        myMoney.textContent = money;
+      };
+      cokaButton.onclick = function () {
+        display.textContent = "コーラを購入しました。";
+        money -= 130;
+        myMoney.textContent = money;
+      };
+      zoneButton.onclick = function () {
+        display.textContent = "ゾーンを購入しました。";
+        money -= 200;
+        myMoney.textContent = money;
+      };
+
+      //表示したいところ.textContent = "OO を購入しました" }
+    </script>
+  </body>
+</html>
