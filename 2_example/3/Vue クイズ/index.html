@@ -10,8 +10,8 @@
   <div id="app">
     <h2>Q. {{ quiz.text }}</h2>
     <img
+    v-bind:src="quizImagePath"
       id="quiz-image"
-      v-bind:src="quizImagePath"
       v-bind:alt="quiz.text">
     <div class="container">
       <button
